@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
+::-webkit-scrollbar{
+    width:.6rem;
+}
+::-webkit-scrollbar-track{
+    background-color: rgba(0, 0, 0, 0.136);
+    border-radius: 1rem;
+    margin-block:1rem;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 255, 255, 0.306);
+    border-radius: 1rem;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.484), rgba(0, 0, 0, 0.193));
+}
+
+*{
+    margin: 0px; padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Aboreto', cursive;
+    transition: all ease 200ms;
+    color: #F2A766;
+}
+
+#content{
+    background-image: linear-gradient(0deg, #1A1826, #323859);
+    width:100vw; height: 100vh;
+    display: flex; flex-direction: column;
+    background-size: cover;
+    align-items: center;
+}
+.header{
+    margin-top: 0px;
+    height: 10%; width: 100%;
+    background-color: #1A1826;
+    opacity: 50%;
+    border-bottom: 1px solid #3084F2;
+}
+.tab-container{
+    margin-top: 15px;
+    height: 5vh;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+}
+button{
+    height: 100%;
+    width: 100px;
+    background-color: #3084f22d;
+    padding: 5px;
+    text-align: center;
+    box-sizing: border-box;
+    border: none;
+    
+}
+button:hover{
+    cursor: pointer;
+    background-color: #323859;
+}
+
+button.active{
+    background-color: #1A1826;
+    border-top-left-radius:0.5rem ;
+    border-top-right-radius:.5rem ;
+    color:#85D982 ;
+}
+
+.details{
+    height: 80vh;
+    width: 100%;
+}
+
+[data-tab-content]{
+    height: 100%; width: 60%;
+    overflow: auto;
+    font-size: 50px;
+    background-color: #1A1826;
+    margin: 0 auto;
+    display: none;
+    border-radius: .5rem;
+}
+.active[data-tab-content]{
+    display:block;
+}
