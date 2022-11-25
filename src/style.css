@@ -13,7 +13,7 @@
     border-radius: 1rem;
 }
 ::-webkit-scrollbar-thumb:hover{
-    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.484), rgba(0, 0, 0, 0.193));
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.193), rgba(0, 0, 0, 0.193));
 }
 
 *{
@@ -25,18 +25,20 @@
 }
 
 #content{
+    position: absolute;
     background-image: linear-gradient(0deg, #1A1826, #323859);
     width:100vw; height: 100vh;
     display: flex; flex-direction: column;
     background-size: cover;
     align-items: center;
+    overflow: auto;
 }
 .header{
     margin-top: 0px;
     height: 10%; width: 100%;
     background-color: #1A1826;
-    opacity: 50%;
     border-bottom: 1px solid #3084F2;
+    display: flex;
 }
 .tab-container{
     margin-top: 15px;
@@ -54,18 +56,22 @@ button{
     text-align: center;
     box-sizing: border-box;
     border: none;
-    
+    border-top-left-radius:0.3rem ;
+    border-top-right-radius:0.3rem ;
+    font-size: 17px;
 }
 button:hover{
     cursor: pointer;
     background-color: #323859;
+    
 }
 
 button.active{
-    background-color: #1A1826;
-    border-top-left-radius:0.5rem ;
-    border-top-right-radius:.5rem ;
+    background-color: #1A18265e;
+    border-top-left-radius:1rem ;
+    border-top-right-radius:1rem ;
     color:#85D982 ;
+    backdrop-filter: blur(5px);
 }
 
 .details{
@@ -75,13 +81,55 @@ button.active{
 
 [data-tab-content]{
     height: 100%; width: 60%;
+    min-width: 400px;
     overflow: auto;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
     font-size: 50px;
-    background-color: #1A1826;
+    background-color: #1A18265e;
     margin: 0 auto;
     display: none;
     border-radius: .5rem;
+    box-shadow: 0px 5px 4px 1px rgba(0, 0, 0, 0.228);
+    backdrop-filter: blur(5px);
 }
 .active[data-tab-content]{
     display:block;
+}
+
+[src]{
+    width: 50px;
+    height: 60px;
+    margin: 10px auto;
+    opacity: 100%;
+}
+
+h1{
+    margin-top: 20px;
+    font-size: 50px;
+}
+h3{
+    margin-top: 100px;
+    font-size: 30px;
+    color: #c2824a;
+}
+h6{
+    margin-top: 50px;
+    font-size: 20px;
+}
+h4{
+    margin-top: 200px;
+}
+
+.details>.tab-content>div>img{
+    margin-top: 20px;
+    width: 500px; height: 400px;
+    border-radius: 1rem;
+}
+
+
+#contact>a>img{
+    margin-top: 200px;
+    width:100px; height:100px;
 }
